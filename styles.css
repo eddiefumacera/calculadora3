@@ -406,3 +406,26 @@ td.qty{ width:170px; }
   .modal-fields{ grid-template-columns: 1fr; }
   .logo{ width:72px; height:72px; }
 }
+.filterbtn{
+  padding:10px 14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.28);
+  color: rgba(255,255,255,.80);
+  font-weight:700;
+  font-size:12px;
+  cursor:pointer;
+  transition: all .18s ease;
+}
+
+.filterbtn:hover{
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+}
+
+.filterbtn.is-active{
+  border-color: rgba(225,29,46,.55);
+  background: rgba(225,29,46,.18);
+  box-shadow: 0 0 0 5px rgba(225,29,46,.12);
+  color: #fff;
+}
