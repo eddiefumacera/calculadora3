@@ -602,12 +602,12 @@ async function init(){
   // filters
   els.searchInput.addEventListener("input", applyFilters);
   els.categorySelect.addEventListener("change", applyFilters);
-  els.toggleOnlySelected.addEventListener("change", () => {
-    state.onlySelected = els.toggleOnlySelected.checked;
+  els.toggleOnlySelected.addEventListener("click", () => {
+    state.onlySelected = !state.onlySelected;
+    els.toggleOnlySelected.classList.toggle("is-active", state.onlySelected);
     applyFilters();
   });
-
-  // table events
+// table events
   els.tbody.addEventListener("click", handleTableClick);
   els.tbody.addEventListener("input", handleTableInput);
   els.tbody.addEventListener("blur", handleTableCommit, true);

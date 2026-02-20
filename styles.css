@@ -406,6 +406,9 @@ td.qty{ width:170px; }
   .modal-fields{ grid-template-columns: 1fr; }
   .logo{ width:72px; height:72px; }
 }
+
+
+/* ===== BOTÃO FILTRO SOMENTE SELECIONADOS ===== */
 .filterbtn{
   padding:10px 14px;
   border-radius:14px;
@@ -416,13 +419,13 @@ td.qty{ width:170px; }
   font-size:12px;
   cursor:pointer;
   transition: all .18s ease;
+  white-space: nowrap;
 }
-
 .filterbtn:hover{
   background: rgba(255,255,255,.08);
   transform: translateY(-1px);
 }
-
+.filterbtn:active{ transform: translateY(1px); }
 .filterbtn.is-active{
   border-color: rgba(225,29,46,.55);
   background: rgba(225,29,46,.18);
