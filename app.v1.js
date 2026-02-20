@@ -232,8 +232,7 @@ function renderTable(){
     const qa = Number(state.qty[a.id] || 0);
     const qb = Number(state.qty[b.id] || 0);
     if ((qb>0) !== (qa>0)) return (qb>0) - (qa>0);
-    if (qb !== qa) return qb - qa;
-    return getItemName(a).localeCompare(getItemName(b),"pt-BR");
+    return (a.__idx ?? 0) - (b.__idx ?? 0);
   });
 
   const rowsHtml = items.map(item => {
@@ -320,8 +319,7 @@ function buildReceiptText(){
     const qa = Number(state.qty[a.id] || 0);
     const qb = Number(state.qty[b.id] || 0);
     if ((qb>0) !== (qa>0)) return (qb>0) - (qa>0);
-    if (qb !== qa) return qb - qa;
-    return getItemName(a).localeCompare(getItemName(b),'pt-BR');
+    return (a.__idx ?? 0) - (b.__idx ?? 0);
   });
 
   for (const item of items){
@@ -567,6 +565,8 @@ async function init(){
   state.itemNames = catalog.item_names || {};
   state.categoryNames = catalog.category_names || {};
   state.catalog = Array.isArray(catalog.items) ? catalog.items : [];
+  // índice estável para manter a ordem original
+  state.catalog.forEach((it, idx) => { it.__idx = idx; });
   state.itemById = Object.fromEntries(state.catalog.map(i => [i.id, i]));
 
   if (els.facName) els.facName.textContent = state.facName;

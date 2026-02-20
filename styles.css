@@ -73,6 +73,9 @@ body::before{
   gap:14px;
 }
 .logo{
+  object-fit: contain;
+  display:block;
+
   width:86px; height:86px;
   border-radius:22px;
   padding:10px;
@@ -404,7 +407,10 @@ td.qty{ width:170px; }
   .controls{ grid-template-columns: 1fr 1fr; }
   .switches{ grid-column: 1 / -1; }
   .modal-fields{ grid-template-columns: 1fr; }
-  .logo{ width:72px; height:72px; }
+  .logo{
+  object-fit: contain;
+  display:block;
+ width:72px; height:72px; }
 }
 
 
