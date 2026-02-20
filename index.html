@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Materiais</title>
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <div class="fatal" id="fatalError" aria-hidden="true">
+    <div class="fatal-inner">
+      <b>Ops.</b> Algo não carregou. Faça Ctrl+F5 e confira se você subiu todos os arquivos.
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="Logo" />
+      <div class="facname" id="facName">TROPA DA LB</div>
+    </div>
+
+    <div class="actions">
+      <div class="modechip is-normal" id="modeChip" title="Clique para alternar modo (Calculadora → Valores → Materiais)">Calculadora</div>
+      <div class="modemenu" id="modeMenu" aria-hidden="true" role="menu">
+        <button class="menuitem" type="button" data-mode="normal" role="menuitem">Calculadora</button>
+        <button class="menuitem" type="button" data-mode="value" role="menuitem">Valores</button>
+        <button class="menuitem" type="button" data-mode="materials" role="menuitem">Materiais</button>
+      </div>
+
+      <button class="btn" id="btnReset" type="button">Zerar</button>
+      <button class="btn primary" id="btnReceipt" type="button">Gerar nota</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="controls">
+        <div class="control">
+          <label>Buscar</label>
+          <input id="searchInput" type="text" placeholder="Digite para filtrar…" />
+        </div>
+
+        <div class="control">
+          <label>Categoria</label>
+          <select id="categorySelect">
+            <option value="">Todas</option>
+          </select>
+        </div>
+
+        <div class="control switches">
+          <label class="switch">
+            <input type="checkbox" id="toggleOnlySelected" />
+            <span class="slider"></span>
+            <span class="switch-label">Somente selecionados</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="tablewrap">
+        <table class="grid">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th class="col-cat">Categoria</th>
+              <th class="col-qty">Qtd</th>
+              <th class="col-mat col-a" data-mat="a">Material A</th>
+              <th class="col-mat col-b" data-mat="b">Material B</th>
+              <th class="col-mat col-c" data-mat="c">Material C</th>
+              <th class="col-mat col-d" data-mat="d">Material D</th>
+              <th class="col-mat col-e" data-mat="e">Material E</th>
+              <th class="col-val col-value">Valor (k)</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="totals card">
+        <div class="totals-title">Totais</div>
+        <div class="totals-grid">
+          <div class="kv"><span id="labA">Material A</span><b id="totA">0</b></div>
+          <div class="kv"><span id="labB">Material B</span><b id="totB">0</b></div>
+          <div class="kv"><span id="labC">Material C</span><b id="totC">0</b></div>
+          <div class="kv"><span id="labD">Material D</span><b id="totD">0</b></div>
+          <div class="kv"><span id="labE">Material E</span><b id="totE">0</b></div>
+          <div class="kv total"><span>Total (k)</span><b id="totV">0</b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL NOTA -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div class="modal-title">Nota</div>
+        <button class="iconbtn" id="btnClose" type="button" aria-label="Fechar">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-fields">
+          <div class="control">
+            <label>Cliente (opcional)</label>
+            <input id="clientName" type="text" placeholder="Nome do cliente" />
+          </div>
+          <div class="control">
+            <label>Observação (opcional)</label>
+            <input id="clientNote" type="text" placeholder="Ex: prazo, forma de pagamento…" />
+          </div>
+        </div>
+
+        <pre class="receipt" id="receiptText"></pre>
+
+        <div class="history">
+          <div class="history-head">
+            <b>Histórico</b>
+            <div class="history-actions">
+              <button class="btn" id="btnSaveHistory" type="button">Salvar</button>
+              <button class="btn" id="btnClearHistory" type="button">Limpar</button>
+            </div>
+          </div>
+          <div class="history-list" id="historyList"></div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn primary" id="btnCopy" type="button">Copiar nota</button>
+        <button class="btn" id="btnCopyLink" type="button">Copiar link</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.v1.js"></script>
+</body>
+</html>

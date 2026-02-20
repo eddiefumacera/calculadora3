@@ -1,0 +1,170 @@
+{
+  "fac_name": "TROPA DA LB",
+  "materials": {
+    "a": "Material A",
+    "b": "Material B",
+    "c": "Material C",
+    "d": "Material D",
+    "e": "Material E"
+  },
+  "item_names": {},
+  "category_names": {},
+  "items": [
+    {
+      "id": "item_01",
+      "name": "Item 01",
+      "category": "Categoria 1",
+      "value_k": 405,
+      "recipe": {
+        "a": 22,
+        "b": 20,
+        "c": 8,
+        "d": 48,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_02",
+      "name": "Item 02",
+      "category": "Categoria 1",
+      "value_k": 405,
+      "recipe": {
+        "a": 22,
+        "b": 20,
+        "c": 8,
+        "d": 48,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_03",
+      "name": "Item 03",
+      "category": "Categoria 1",
+      "value_k": 405,
+      "recipe": {
+        "a": 22,
+        "b": 20,
+        "c": 8,
+        "d": 48,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_04",
+      "name": "Item 04",
+      "category": "Categoria 1",
+      "value_k": 405,
+      "recipe": {
+        "a": 22,
+        "b": 20,
+        "c": 8,
+        "d": 48,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_05",
+      "name": "Item 05",
+      "category": "Categoria 1",
+      "value_k": 420,
+      "recipe": {
+        "a": 24,
+        "b": 20,
+        "c": 8,
+        "d": 48,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_06",
+      "name": "Item 06",
+      "category": "Categoria 2",
+      "value_k": 270,
+      "recipe": {
+        "a": 12,
+        "b": 6,
+        "c": 8,
+        "d": 12,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_07",
+      "name": "Item 07",
+      "category": "Categoria 2",
+      "value_k": 270,
+      "recipe": {
+        "a": 16,
+        "b": 8,
+        "c": 6,
+        "d": 0,
+        "e": 16
+      }
+    },
+    {
+      "id": "item_08",
+      "name": "Item 08",
+      "category": "Categoria 2",
+      "value_k": 270,
+      "recipe": {
+        "a": 16,
+        "b": 8,
+        "c": 12,
+        "d": 0,
+        "e": 24
+      }
+    },
+    {
+      "id": "item_09",
+      "name": "Item 09",
+      "category": "Categoria 2",
+      "value_k": 270,
+      "recipe": {
+        "a": 18,
+        "b": 10,
+        "c": 6,
+        "d": 0,
+        "e": 20
+      }
+    },
+    {
+      "id": "item_10",
+      "name": "Item 10",
+      "category": "Categoria 2",
+      "value_k": 290,
+      "recipe": {
+        "a": 14,
+        "b": 6,
+        "c": 8,
+        "d": 0,
+        "e": 16
+      }
+    },
+    {
+      "id": "item_11",
+      "name": "Item 11",
+      "category": "Categoria 3",
+      "value_k": 180,
+      "recipe": {
+        "a": 10,
+        "b": 6,
+        "c": 4,
+        "d": 12,
+        "e": 0
+      }
+    },
+    {
+      "id": "item_12",
+      "name": "Item 12",
+      "category": "Categoria 3",
+      "value_k": 200,
+      "recipe": {
+        "a": 10,
+        "b": 6,
+        "c": 4,
+        "d": 24,
+        "e": 0
+      }
+    }
+  ]
+}
